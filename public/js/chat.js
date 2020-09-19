@@ -867,7 +867,7 @@ function startUp() {
   }
 
   // Set tab title
-  document.title = "Zipcall - " + url.substring(url.lastIndexOf("/") + 1);
+  document.title = "Latent Space - " + url.substring(url.lastIndexOf("/") + 1);
 
   // get webcam on load
   VideoChat.requestMediaStream();
