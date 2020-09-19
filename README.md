@@ -1,4 +1,5 @@
 # Latent Space
+
 Submission code for HackMIT 2020.
 
 ```
@@ -7,3 +8,5 @@ cd hackmit
 npm install
 npm start
 ```
+
+To use nodemon, replace `npm start` with `npm run dev`.
