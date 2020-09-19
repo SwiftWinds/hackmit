@@ -108,12 +108,7 @@
                     >This is a label</label
                   >
                   <div class="form-group-desktop">
-                    <input
-                      class="form-input"
-                      type="text"
-                      id="input-01"
-                      value="PurpleSquid"
-                    />
+                    <input class="form-input" type="text" id="input-01" />
                     <button
                       class="button button-primary pulse"
                       onclick="{window.location.href = '/join/' + document.getElementById('input-01').value}"
@@ -328,12 +323,7 @@
                     max-width: 400px;
                   "
                 >
-                  <input
-                    class="form-input"
-                    type="text"
-                    id="input-02"
-                    value="BigRabbit"
-                  />
+                  <input class="form-input" type="text" id="input-02" />
                   <a
                     class="button button-primary button-wide-mobile pulse"
                     style="
@@ -408,8 +398,13 @@
       </footer>
     </div>
     <script src="js/landing.js"></script>
+    <script src="js/newroom.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      history.scrollRestoration = "manual";
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
       AOS.init({
         once: true,
       });
