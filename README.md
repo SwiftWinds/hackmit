@@ -1,27 +1,70 @@
-# react-mui-boilerplate
+# Zipcall - Decentralized Video Chat
 
-Material-UI CRA Boilerplate with <b>React Routing</b> and Node Sass. [Demo](https://react-mui-boilerplate.netlify.app).
+[![Author](https://img.shields.io/badge/Author-ianramzy-brightgreen.svg)](https://ianramzy.com)
+![License: CC-NC](https://img.shields.io/badge/License-CCNC-blue.svg)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-brightgreen.svg)](https://paypal.me/ianramzy)
+[![Repo Link](https://img.shields.io/badge/Repo-Link-black.svg)](https://github.com/ianramzy/decentralized-video-chat)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?)](https://github.com/prettier/prettier)
+[![Join the chat at https://gitter.im/zipcall](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/zipcall)
 
-## MUI and React Router Navigation
+# https://zipcall.io
 
-React Router will dynamically map routes (including dropdowns) found in `src/data/routes.js`.
+Decentralized video chat platform powered by WebRTC using Twilio STUN/TURN infrastructure.
+Zipcall provides video quality and latency simply not available with traditional
+technology.
 
-Material-UI destkop navbar and mobile drawer is preconfigured and will also dynamically map the routes found in `src/data/routes.js`.
+![screenshot](public/images/readmecall.png "Video Calling")
 
-## Styles
+## Features
 
-Material-UI theming and `<CssBaseline />` is already implemented. The typical `useStyles()` template is already used on the Header component. Node SASS is also configured with some commonly used styles.
+<img align="right" width="400" height="auto" src="public/images/preview.gif">
 
-## Other
+- Screen sharing
+- Picture in picture
+- Live captions
+- Text chat
+- Auto-scaling video quality
+- No download required, entirely browser based
+- Direct peer to peer connection ensures lowest latency
+- Single use disposable chat rooms
 
-`<Page />` is a useful re-usable component that works with the `<Header />` component. It also allows <b>easy `react-helmet` usage</b> via props.
+## Quick start
 
-Netlify `_redirects` file inside `/public`.
+- You will need to have Node.js installed, this project has been tested with Node version 10.X and 12.X
+- Clone this repo
 
-## Usage
+```
+git clone https://github.com/ianramzy/decentralized-video-chat
+cd decentralized-video-chat
+```
 
-```bash
-git clone https://github.com/MasonWang025/react-mui-boilerplate.git
+#### Set up credentials
+
+- Rename .env.template to .env
+- Sign up for free twilio account https://www.twilio.com/login
+- Get your Account SID and Auth Token from the Twillio console
+- Fill in your credentials in the .env file
+
+#### Install dependencies
+
+```
 npm install
+```
+
+#### Start the server
+
+```
 npm start
 ```
+
+- Open `localhost:3000` in browser
+- If you want to use a client on another computer/network, make sure you publish your server on an HTTPS connection.
+  You can use a service like [ngrok](https://ngrok.com/) for that.
+
+## Contributing
+
+Pull Requests are welcome!
+
+Please run prettier on all of your PRs before submitting, this can be done with `prettier --write` in the project directory
+
+For communication we use Gitter Chat which can be found here: [![Join the chat at https://gitter.im/zipcall](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/zipcall)
