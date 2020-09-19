@@ -27,6 +27,7 @@
       property="og:description"
       content="Latent Space is a recurrent neural autoencoder that compresses audio streams, with embeddings specifically for music, to reduce audio lag. Built on Zipcall."
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="has-animations">
     <tag
@@ -60,20 +61,23 @@
                   >
                     <h1
                       class="mt-7 title reveal-from-bottom"
-                      data-reveal-delay="50"
+                      data-aos="zoom-in-up"
+                      data-aos-duration="1100"
                     >
                       Latent Space:
                     </h1>
                     <h1
                       style="margin-top: 0;"
                       class="mb-16 reveal-from-bottom"
-                      data-reveal-delay="150"
+                      data-aos="zoom-in-up"
+                      data-aos-duration="1250"
                     >
                       Minimizing latency with latent spaces.
                     </h1>
                     <p
                       class="mt-0 mb-0 reveal-from-bottom latent-space-subtitle"
-                      data-reveal-delay="300"
+                      data-aos="zoom-in-up"
+                      data-aos-duration="1400"
                     >
                       Latent Space is a recurrent neural autoencoder that
                       compresses audio streams, with embeddings specifically for
@@ -90,7 +94,7 @@
           id="newcall"
           class="cta section center-content-mobile reveal-from-bottom"
         >
-          <div class="container">
+          <div class="container" data-aos="zoom-in-up" data-aos-duration="1550">
             <div class="cta-inner section-inner cta-split">
               <div class="cta-slogan">
                 <h3 class="m-0">
@@ -125,13 +129,17 @@
 
         <section class="features-tiles section center-content">
           <div class="container">
-            <div class="features-tiles-inner section-inner has-top-divider">
+            <div class="features-tiles-inner section-inner">
               <div class="section-header">
                 <div
                   class="container-xs reveal-from-bottom"
                   data-reveal-delay="150"
+                  data-aos="fade-up"
+                  data-aos-duration="1550"
                 >
-                  <h2 class="mt-0 mb-16">See the whole picture</h2>
+                  <h2 class="mt-0 mb-16">
+                    See the whole picture
+                  </h2>
                   <p class="m-0">
                     Latent Space is built radically different. We left behind
                     slow bulky servers, opting for decentralized peer to peer
@@ -141,7 +149,11 @@
                 </div>
               </div>
               <div class="tiles-wrap">
-                <div class="tiles-item reveal-from-right">
+                <div
+                  class="tiles-item reveal-from-right"
+                  data-aos="fade-up-right"
+                  data-aos-duration="1550"
+                >
                   <div class="tiles-item-inner">
                     <div class="features-tiles-item-header">
                       <div class="features-tiles-item-image mb-16">
@@ -163,7 +175,11 @@
                   </div>
                 </div>
 
-                <div class="tiles-item reveal-from-left">
+                <div
+                  class="tiles-item reveal-from-left"
+                  data-aos="fade-up-left"
+                  data-aos-duration="1550"
+                >
                   <div class="tiles-item-inner">
                     <div class="features-tiles-item-header">
                       <div class="features-tiles-item-image mb-16">
@@ -185,7 +201,11 @@
                   </div>
                 </div>
 
-                <div class="tiles-item reveal-from-right">
+                <div
+                  class="tiles-item reveal-from-right"
+                  data-aos="fade-up-right"
+                  data-aos-duration="1550"
+                >
                   <div class="tiles-item-inner">
                     <div class="features-tiles-item-header">
                       <div class="features-tiles-item-image mb-16">
@@ -208,7 +228,11 @@
                   </div>
                 </div>
 
-                <div class="tiles-item reveal-from-left">
+                <div
+                  class="tiles-item reveal-from-left"
+                  data-aos="fade-up-left"
+                  data-aos-duration="1550"
+                >
                   <div class="tiles-item-inner">
                     <div class="features-tiles-item-header">
                       <div class="features-tiles-item-image mb-16">
@@ -230,7 +254,11 @@
                   </div>
                 </div>
 
-                <div class="tiles-item reveal-from-right">
+                <div
+                  class="tiles-item reveal-from-right"
+                  data-aos="fade-up-right"
+                  data-aos-duration="1550"
+                >
                   <div class="tiles-item-inner">
                     <div class="features-tiles-item-header">
                       <div class="features-tiles-item-image mb-16">
@@ -253,7 +281,11 @@
                   </div>
                 </div>
 
-                <div class="tiles-item reveal-from-left">
+                <div
+                  class="tiles-item reveal-from-left"
+                  data-aos="fade-up-left"
+                  data-aos-duration="1550"
+                >
                   <div class="tiles-item-inner">
                     <div class="features-tiles-item-header">
                       <div class="features-tiles-item-image mb-16">
@@ -375,5 +407,11 @@
       </footer>
     </div>
     <script src="js/landing.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
   </body>
 </html>

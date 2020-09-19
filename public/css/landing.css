@@ -3467,7 +3467,7 @@ img.has-shadow {
 /*Pulse Button*/
 
 
-body > tag > div > main > section.illustration-section-01 > div > div > div > div > div > h1.title {
+body > tag > div > main > section > div > div > div > div > div > h1.title {
   font-size: 2.8em;
   text-shadow: 2px 2.5px #9866CE;
   margin-bottom: 13px;
