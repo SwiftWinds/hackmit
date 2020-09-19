@@ -30,3 +30,43 @@ button {
   background-color: #dd62afaa;
   color: #eee;
 }
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:#3a3a3d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E861AA;
+  transition: all 0.55s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6D96;
+}
+
+a,
+button {
+  text-decoration: none;
+  outline: none !important;
+  cursor: default;
+  @media screen and (max-height: 540px) and (orientation: landscape) {
+    cursor: default;
+  }
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
