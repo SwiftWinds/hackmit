@@ -901,11 +901,11 @@ strong {
 
 .button-primary {
   color: #f9faff;
-  background-color: #376df9;
+  background-color:#2758d9;
 }
 
 .button-primary:hover {
-  background-color: #4678f9;
+  background-color:  #376df9;
 }
 
 .button-primary.is-loading::after {
