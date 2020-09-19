@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:600|Lato:400&display=swap");
 
+@media only screen and (min-width: 750px) {
+  .latent-space-subtitle {
+    padding-right: 15rem;
+  }
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
