@@ -48,7 +48,7 @@ var VideoChat = {
       })
       .then((stream) => {
         const audio = stream.getAudioTracks()[0];
-        logIt("OUTBOUND AUDIO TRACK:", audio);
+        logIt("[OUTBOUND AUDIO TRACK]: ", audio);
         VideoChat.onMediaStream(stream);
         localVideoText.text("Drag Me");
         setTimeout(() => localVideoText.fadeOut(), 5000);
@@ -289,6 +289,7 @@ var VideoChat = {
   onAnswer: function (answer) {
     logIt("onAnswer <<< Received answer");
     var rtcAnswer = new RTCSessionDescription(JSON.parse(answer));
+    logIt("[ANSWER]: ", rtcAnswer);
     // Set remote description of RTCSession
     VideoChat.peerConnection.setRemoteDescription(rtcAnswer);
     // The caller now knows that the callee is ready to accept new ICE candidates, so sending the buffer over
@@ -306,6 +307,9 @@ var VideoChat = {
     logIt("onAddStream <<< Received new stream from remote. Adding it...");
     // Update remote video source
     VideoChat.remoteVideo.srcObject = event.stream;
+    logIt("=======================");
+    logIt("[REMOTE AUDIO TRACK]: ", event.stream.getAudioTracks()[0]);
+    logIt("=======================");
     // Close the initial share url snackbar
     Snackbar.close();
     // Remove the loading gif from video
@@ -317,14 +321,6 @@ var VideoChat = {
     // Reposition local video after a second, as there is often a delay
     // between adding a stream and the height of the video div changing
     setTimeout(() => rePositionLocalVideo(), 500);
-    // var timesRun = 0;
-    // var interval = setInterval(function () {
-    //   timesRun += 1;
-    //   if (timesRun === 10) {
-    //     clearInterval(interval);
-    //   }
-    //   rePositionLocalVideo();
-    // }, 300);
   },
 };
 
@@ -345,8 +341,9 @@ function getBrowserName() {
 }
 
 // Basic logging class wrapper
-function logIt(message, error) {
-  console.log(message);
+function logIt(message, msg2) {
+  if (msg2) console.log(message, msg2);
+  else console.log(message);
 }
 
 // Called when socket receives message that room is full
@@ -401,7 +398,6 @@ function muteMicrophone() {
   VideoChat.peerConnection.getSenders().find(function (s) {
     if (s.track.kind === "audio") {
       audioTrack = s.track;
-      logIt("OUTBOUND AUDIO TRACK:", audioTrack);
     }
   });
   isMuted = !audioTrack.enabled;
