@@ -1,0 +1,78 @@
+// underline link
+.underline {
+  position: relative;
+  text-decoration: none;
+  color: currentColor;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleY(0.999);
+    height: 1px;
+    background-color: currentColor;
+    transform-origin: right;
+    border: 0;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover {
+    cursor: pointer;
+    &:after {
+      transform: scaleX(0) scaleY(1.001);
+    }
+  }
+  &.bold {
+    &:after {
+      height: 2px;
+    }
+  }
+}
+
+*::selection {
+  background-color: $selection-color;
+}
+
+// scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $scrollbar-track;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-handle;
+  transition: all 0.55s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $scrollbar-handle-hover;
+}
+
+// mobile asthetics
+a,
+button {
+  text-decoration: none;
+  outline: none !important;
+  @include media("<=md") {
+    cursor: default;
+  }
+  @media screen and (max-height: 540px) and (orientation: landscape) {
+    cursor: default;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
