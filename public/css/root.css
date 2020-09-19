@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+img {
+  user-select: none;
+}
+
+button {
+  text-transform: none !important;
+}
+
+* {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+::-moz-selection {
+  background-color: #dd62afaa;
+  color: #eee;
+}
+::selection {
+  background-color: #dd62afaa;
+  color: #eee;
+}

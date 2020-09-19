@@ -20,6 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Latent Space</title>
+    <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="shortcut icon" href="images/logo.svg" />
     <meta
@@ -51,22 +52,24 @@
         </div>
       </header>
       <main class="site-content">
-        <section class="hero section illustration-section-01">
+        <section class="illustration-section-01">
           <div class="container">
             <div class="hero-inner section-inner">
               <div class="split-wrap invert-mobile">
-                <div class="split-item">
+                <div style="margin-top: 80px; margin-bottom: 42px;">
                   <div
                     class="hero-content split-item-content center-content-mobile"
                   >
                     <h1
-                      class="mt-0 mb-16 reveal-from-bottom"
+                      class="mt-6 mb-16 reveal-from-bottom"
                       data-reveal-delay="150"
                     >
-                      Latent Space:<br />Free browser based video calling for
-                      everyone.
+                      Latent Space:<br />Minimizing latency with latent spaces.
                     </h1>
-                    <p class="mt-0 reveal-from-bottom" data-reveal-delay="300">
+                    <p
+                      class="mt-0 mb-0 reveal-from-bottom"
+                      data-reveal-delay="300"
+                    >
                       Simple, Secure, and Fast. Peer to peer video calling
                       provides quality and latency simply not available with
                       traditional technology.
@@ -78,13 +81,16 @@
           </div>
         </section>
 
-        <section class="cta section center-content-mobile reveal-from-bottom">
+        <section
+          id="newcall"
+          class="cta section center-content-mobile reveal-from-bottom"
+        >
           <div class="container">
             <div class="cta-inner section-inner cta-split">
               <div class="cta-slogan">
                 <h3 class="m-0">
                   Pick a name.<br />
-                  Share URL. <br />
+                  Share the URL. <br />
                   Start chatting.
                 </h3>
               </div>
@@ -119,7 +125,7 @@
               <div class="section-header">
                 <div
                   class="container-xs reveal-from-bottom"
-                  data-reveal-delay="650"
+                  data-reveal-delay="150"
                 >
                   <h2 class="mt-0 mb-16">See the whole picture</h2>
                   <p class="m-0">
@@ -279,20 +285,28 @@
                   </h2>
                 </div>
                 <div class="center-content">
-                  <a
-                    class="button button-primary button-wide-mobile pulse"
-                    style="
-                      border: 0;
-                      background: linear-gradient(
-                        100deg,
-                        #376df9 0,
-                        #ff5fa0 75%,
-                        #ffc55a 100%
-                      );
-                    "
-                    href="/newcall"
-                    >Try now</a
-                  >
+                  <div class="form-group-desktop">
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="input-02"
+                      value="BigRabbit"
+                    />
+                    <a
+                      class="button button-primary button-wide-mobile pulse"
+                      style="
+                        border: 0;
+                        background: linear-gradient(
+                          100deg,
+                          #376df9 0,
+                          #ff5fa0 75%,
+                          #ffc55a 100%
+                        );
+                      "
+                      onclick="{window.location.href = '/join/' + document.getElementById('input-02').value}"
+                      >Try now</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
