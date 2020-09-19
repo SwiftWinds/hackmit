@@ -31,6 +31,20 @@ button {
   color: #eee;
 }
 
+.github-logo,
+body
+  > div
+  > footer
+  > div
+  > div
+  > div.footer-top.space-between.text-xxs
+  > div.footer-social
+  > div
+  > a
+  > svg
+  > path {
+  fill: #ee60a8;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -39,18 +53,18 @@ button {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background:#3a3a3d;
+  background: #3a3a3d;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #E861AA;
+  background: #e861aa;
   transition: all 0.55s ease;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF6D96;
+  background: #ff6d96;
 }
 
 a,
@@ -63,7 +77,8 @@ button {
   }
 }
 
-a:hover, button:hover {
+a:hover,
+button:hover {
   cursor: pointer;
 }
 

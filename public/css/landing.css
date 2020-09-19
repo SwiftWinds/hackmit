@@ -378,7 +378,7 @@ html {
 }
 
 body {
-  color: #959cb1;
+  color: #a9adb8;
   font-size: 1rem;
 }
 
@@ -485,7 +485,7 @@ a.button-link {
 
 a.button-link:hover,
 a.button-link:active {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 a.func-link {
@@ -1028,27 +1028,27 @@ fieldset {
 }
 
 .form-input::-webkit-input-placeholder {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .form-input::-moz-placeholder {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .form-input:-ms-input-placeholder {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .form-input::-ms-input-placeholder {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .form-input::placeholder {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .form-input::-ms-input-placeholder {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 textarea.form-input {
@@ -1131,7 +1131,7 @@ textarea.form-input {
 
 .form-checkbox,
 .form-radio {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .form-checkbox,
@@ -1359,7 +1359,7 @@ textarea.form-input {
   width: 24px;
   height: 2px;
   position: absolute;
-  background: #959cb1;
+  background: #a9adb8;
 }
 
 .invert-color .hamburger-inner,
@@ -1649,7 +1649,7 @@ textarea.form-input {
 
 .modal-close:hover::before,
 .modal-close:hover::after {
-  background: #959cb1;
+  background: #a9adb8;
 }
 
 @media (min-width: 641px) {
@@ -1758,7 +1758,7 @@ textarea.form-input {
 }
 
 .carousel-bullet:hover::before {
-  background: #959cb1;
+  background: #a9adb8;
 }
 
 .invert-color .carousel-bullet::before {
@@ -2186,7 +2186,7 @@ textarea.form-input {
 
 .footer-block a:hover,
 .footer-block a:active {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .invert-color .footer-block a {
@@ -2256,7 +2256,7 @@ textarea.form-input {
 
 .footer-nav a:hover,
 .footer-nav a:active {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .invert-color .footer-nav a {
@@ -2690,7 +2690,7 @@ ul.pricing-item-features-list li {
 }
 
 .pricing-item-price-currency {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 ul.pricing-item-features-list {
@@ -2866,7 +2866,7 @@ ul.pricing-item-features-list li.is-checked::after {
 }
 
 .text-color-mid {
-  color: #959cb1;
+  color: #a9adb8;
 }
 
 .text-color-low {
