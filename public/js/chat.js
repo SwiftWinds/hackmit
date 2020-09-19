@@ -48,7 +48,9 @@ var VideoChat = {
       })
       .then((stream) => {
         const audio = stream.getAudioTracks()[0];
+        logIt("=======================");
         logIt("[OUTBOUND AUDIO TRACK]: ", audio);
+        logIt("=======================");
         VideoChat.onMediaStream(stream);
         localVideoText.text("Drag Me");
         setTimeout(() => localVideoText.fadeOut(), 5000);
