@@ -21,6 +21,7 @@ try {
 }
 
 function process_microphone_buffer(event) {
+  // NEED THIS TO BE CALLED
   console.log("IN");
   var microphone_buffer = event.inputBuffer.getChannelData(0);
 
