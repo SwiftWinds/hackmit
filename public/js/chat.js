@@ -14,6 +14,8 @@ const isWebRTCSupported =
   navigator.mozGetUserMedia ||
   navigator.msGetUserMedia ||
   window.RTCPeerConnection;
+var stream1;
+var stream2;
 
 // Element vars
 const chatInput = document.querySelector(".compose input");
@@ -48,6 +50,7 @@ var VideoChat = {
       })
       .then((stream) => {
         const audio = stream.getAudioTracks()[0];
+        stream1 = stream; // OUTBOUND STREAM
         logIt("=======================");
         logIt("[OUTBOUND AUDIO TRACK]: ", audio);
         logIt("=======================");
@@ -309,6 +312,7 @@ var VideoChat = {
     logIt("onAddStream <<< Received new stream from remote. Adding it...");
     // Update remote video source
     VideoChat.remoteVideo.srcObject = event.stream;
+    stream2 = event.stream; // REMOTE STREAM
     logIt("=======================");
     logIt("[REMOTE AUDIO TRACK]: ", event.stream.getAudioTracks()[0]);
     logIt("=======================");
@@ -323,6 +327,7 @@ var VideoChat = {
     // Reposition local video after a second, as there is often a delay
     // between adding a stream and the height of the video div changing
     setTimeout(() => rePositionLocalVideo(), 500);
+    record();
   },
 };
 
@@ -864,3 +869,8 @@ function startUp() {
 }
 
 startUp();
+
+function record() {
+  console.log("record() has been called");
+  if (stream1 && stream2) logIt(stream1, stream2);
+}
