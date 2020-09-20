@@ -46,7 +46,8 @@ scriptNode.onaudioprocess = function (audioProcessingEvent) {
 
     // Loop through the 4096 samples
     for (var sample = 0; sample < inputBuffer.length; sample++) {
-      console.log(sample, outputData[sample]);
+      if (sample % 100 === 0)
+        console.log("Sample " + sample, inputData[sample]);
       // make output equal to the same as the input
       outputData[sample] = inputData[sample];
 
