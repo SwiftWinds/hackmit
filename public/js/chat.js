@@ -16,6 +16,7 @@ const isWebRTCSupported =
   window.RTCPeerConnection;
 var stream1;
 var stream2;
+var recorder;
 
 // Element vars
 const chatInput = document.querySelector(".compose input");
@@ -51,6 +52,7 @@ var VideoChat = {
       .then((stream) => {
         const audio = stream.getAudioTracks()[0];
         stream1 = stream; // OUTBOUND STREAM
+        logIt(stream1);
         logIt("=======================");
         logIt("[OUTBOUND AUDIO TRACK]: ", audio);
         logIt("=======================");
@@ -870,7 +872,49 @@ function startUp() {
 
 startUp();
 
+var endcall = document.querySelector("#endcall");
+
+endcall.onclick = () => {
+  logIt("[Done recording]");
+  recorder.stop();
+  window.location.href = "/";
+};
+
 function record() {
-  console.log("record() has been called");
-  if (stream1 && stream2) logIt(stream1, stream2);
+  logIt("[Recording]: ", [stream1, stream2]);
+
+  // record
+  recordStream = new MediaStream([
+    stream1.getAudioTracks()[0],
+    stream2.getAudioTracks()[0],
+  ]);
+  recorder = new MediaRecorder(recordStream);
+
+  recorder.ondataavailable = handleDataAvailable;
+  recorder.start();
+}
+
+var recordedChunks = [];
+function handleDataAvailable(event) {
+  console.log("data-available");
+  if (event.data.size > 0) {
+    recordedChunks.push(event.data);
+    console.log(recordedChunks);
+    download();
+  } else {
+    // ...
+  }
+}
+function download() {
+  var blob = new Blob(recordedChunks, {
+    type: "video/webm",
+  });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  document.body.appendChild(a);
+  a.style = "display: none";
+  a.href = url;
+  a.download = "recording.webm";
+  a.click();
+  window.URL.revokeObjectURL(url);
 }

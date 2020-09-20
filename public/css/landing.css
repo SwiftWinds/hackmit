@@ -1939,7 +1939,7 @@ textarea.form-input {
 
 .tiles-item {
   flex-basis: 330px;
-  max-width: 330px;
+  max-width: 500px;
   box-sizing: content-box;
   padding: 12px;
 }
