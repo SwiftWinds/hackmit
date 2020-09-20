@@ -16,7 +16,7 @@ function getData() {
   request.responseType = "arraybuffer";
   request.onload = function () {
     var audioData = request.response;
-    console.log("asdfds", audioData);
+    console.log("audio data", audioData);
 
     audioCtx.decodeAudioData(
       audioData,
