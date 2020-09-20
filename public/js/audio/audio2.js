@@ -13,7 +13,7 @@ var microphone_data = {};
 try {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
   audio_context = new AudioContext();
-  console.log("cool audio context established");
+  console.log("Audio context established.");
 } catch (e) {
   alert(
     "Web Audio API is not supported by this browser and/or its current config\n"
@@ -21,6 +21,7 @@ try {
 }
 
 function process_microphone_buffer(event) {
+  console.log("IN");
   var microphone_buffer = event.inputBuffer.getChannelData(0);
 
   console.log("microphone_buffer.length ", microphone_buffer.length);
@@ -38,7 +39,7 @@ function start_microphone() {
   microphone_data.script_processor_node = audio_context.createScriptProcessor(
     BUFF_SIZE,
     1,
-    1
+    0
   );
 
   microphone_data.script_processor_node.onaudioprocess = process_microphone_buffer;
@@ -48,7 +49,7 @@ function start_microphone() {
   );
   microphone_data.microphone_stream.connect(audio_context.destination);
 
-  console.log("OK microphone stream connected");
+  console.log("Microphone stream connected.");
 }
 
 function record_microphone() {
@@ -75,5 +76,5 @@ function stop_microphone() {
   microphone_data.media_stream.getAudioTracks()[0].stop();
   microphone_data.script_processor_node.onaudioprocess = null;
 
-  console.log("... microphone now stopped");
+  console.log("Microphone now stopped");
 }

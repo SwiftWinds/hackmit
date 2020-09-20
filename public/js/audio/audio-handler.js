@@ -16,6 +16,7 @@ function getData() {
   request.responseType = "arraybuffer";
   request.onload = function () {
     var audioData = request.response;
+    console.log("asdfds", audioData);
 
     audioCtx.decodeAudioData(
       audioData,
@@ -27,6 +28,8 @@ function getData() {
         "Error with decoding audio data" + e.err;
       }
     );
+
+    console.log(audioCtx);
   };
   request.send();
 }
