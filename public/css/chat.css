@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap");
 
-
 * {
   font-family: "Miriam Libre", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -52,10 +51,6 @@ body {
   -moz-animation-duration: 0.3s;
   animation-duration: 0.3s;
   overflow: hidden;
-}
-
-* {
-  overflow: hidden !important;
 }
 
 video {
@@ -220,6 +215,12 @@ button:hover {
 /*End buttons*/
 
 /*Text chat*/
+
+#entire-chat,
+#entire-chat * {
+  overflow: hidden !important;
+}
+
 #entire-chat {
   position: absolute;
   height: 100%;
