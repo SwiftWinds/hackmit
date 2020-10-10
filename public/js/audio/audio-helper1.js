@@ -1,5 +1,6 @@
 const startBtn = document.querySelector("#start");
 const stopBtn = document.querySelector("#stop");
+// microphone source as AudioContext
 
 startBtn.onclick = record_microphone;
 stopBtn.onclick = stop_microphone;

@@ -1,5 +1,6 @@
 const startBtn = document.querySelector("#start");
 const stopBtn = document.querySelector("#stop");
+// parse microphone audio in real time through BufferNodes
 
 startBtn.onclick = record_microphone;
 stopBtn.onclick = stop_microphone;

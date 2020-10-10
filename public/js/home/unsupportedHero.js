@@ -70,7 +70,7 @@ class Vector {
     this.y = _y;
     this.x0 = this.x;
     this.y0 = this.y;
-    this.vibe = 0.25;
+    this.vibe = 0.42;
   }
   curveTo(to) {
     return {

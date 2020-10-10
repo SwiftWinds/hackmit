@@ -1,5 +1,3 @@
-var playButton = document.querySelector("button");
-
 // Create AudioContext and buffer source
 var audioCtx = new AudioContext();
 source = audioCtx.createBufferSource();
@@ -12,7 +10,7 @@ console.log(scriptNode.bufferSize);
 
 function getData() {
   request = new XMLHttpRequest();
-  request.open("GET", "sampleAudio.ogg", true);
+  request.open("GET", "BufferedAudioContext.ogg", true);
   request.responseType = "arraybuffer";
   request.onload = function () {
     var audioData = request.response;

@@ -94,7 +94,7 @@ class Vector {
   repulse() {
     var limit = 1000;
     var force = 0.2;
-    var force2 = 2.5;
+    var force2 = 1.69;
     var dx = MOUSE.x - this.x;
     var dy = MOUSE.y - this.y;
     var angle = Math.atan2(dx, dy);
