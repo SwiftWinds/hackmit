@@ -33,6 +33,24 @@ p {
   background: #00132b50;
 }
 
+#waves-hero2 {
+  height: 100vh;
+  background: rgb(0, 29, 56);
+  background: radial-gradient(
+    circle,
+    rgba(0, 29, 56, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.hero2 {
+  color: white;
+  margin-top: -100vh;
+  height: 100vh;
+  width: 100%;
+  background: #00132b50;
+}
+
 @media screen and (max-height: 530px) and (orientation: landscape) {
   #waves-hero {
     height: 100vh;
@@ -61,7 +79,7 @@ p {
     height: 69vh;
   }
 }
-@media screen and (max-height: 699px) {
+@media screen and (max-height: 799px) {
   #waves-hero {
     height: 100vh;
   }
@@ -71,12 +89,19 @@ p {
   }
 }
 
-.hero h1 {
+.hero h1.display-1,
+.hero2 h1.display-1 {
   line-height: 0.9em;
   margin-bottom: 0.25em;
 }
 
-#waves-hero canvas {
+.hero h1, .hero h2 {
+  line-height: 0.95em;
+  margin-bottom: 0.25em;
+}
+
+#waves-hero canvas,
+#waves-hero2 canvas {
   width: 100%;
   height: 100%;
 }
