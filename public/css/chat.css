@@ -31,7 +31,7 @@
 /* End Fade in page on load*/
 
 body {
-  background: #16171b;
+  background: rgb(0, 29, 56);
   margin: 0;
   padding: 0;
   opacity: 0; /* make things invisible upon start */
@@ -47,8 +47,12 @@ body {
   overflow: hidden;
 }
 
+* {
+  overflow: hidden !important;
+}
+
 video {
-  background: #16171a;
+  background: rgb(0, 17, 32);
 }
 
 #header {
@@ -106,7 +110,7 @@ a {
   border-radius: 10px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  background: #16171a;
+  background: rgb(0, 13, 26);
 }
 
 /*caption text*/
@@ -120,10 +124,9 @@ a {
   z-index: 1;
   color: white;
   font-family: "Heebo", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.169rem;
   font-weight: bold;
   text-align: left;
-  background: rgba(0, 0, 0, 0.2);
   border-radius: 0 0 10px 10px;
   padding: 10px;
 }
@@ -156,7 +159,7 @@ a {
   border: none;
   font-size: 1.5rem;
   transition: all 0.3s ease-in-out;
-  color: gray;
+  color: #f1f1f1;
   background: transparent;
   cursor: pointer;
   padding: 7px;
@@ -179,8 +182,7 @@ button:hover {
   transform: translate(0%, -50%);
   z-index: 999;
   border-radius: 10px;
-  background: #16171a;
-  box-shadow: 9px 9px 16px #0a0b0c, -9px -9px 16px #222328;
+  background: rgb(0, 58, 109);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -198,7 +200,7 @@ button:hover {
   white-space: nowrap;
   top: 0px;
   font-weight: bold;
-  background: #16171a;
+  background: rgb(0, 58, 109);
   padding: 10px;
   border-radius: 10px;
 }
@@ -232,11 +234,10 @@ button:hover {
   right: 0;
   z-index: 100;
   border-radius: 20px;
-  box-shadow: 6px 6px 12px #030506, -6px -6px 12px #292a30;
   margin: 20px;
   box-sizing: border-box;
   padding: 16px;
-  background: #1c1d22;
+  background: rgb(0, 58, 109);
   overflow-x: hidden;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -298,7 +299,7 @@ button:hover {
 
 /*received messages*/
 #chat-zone .message-item.moderator .message-bloc {
-  background-color: rgb(29, 30, 33);
+  background-color: rgb(47, 48, 52);
   color: #fff;
   position: relative;
   display: flex;
@@ -307,15 +308,13 @@ button:hover {
   padding: 12px;
   max-width: 100%;
   border-radius: 20px 20px 20px 5px;
-  box-shadow: 6px 6px 12px #030506, -6px -6px 12px #23242a;
 }
 
 /*sent messages*/
 #chat-zone .message-item.customer .message-bloc {
-  background-color: rgb(47, 48, 52);
+  background-color: rgb(0, 58, 109);
   color: #fff;
   border-radius: 20px 20px 5px 20px;
-  box-shadow: 6px 6px 12px #030506, -6px -6px 12px #22232a;
 }
 
 #chat-zone .chat-messages .message-item.customer .message-bloc {
@@ -446,7 +445,7 @@ button:hover {
     position: fixed;
     left: 0;
     top: initial;
-    bottom: 0;
+    bottom: 10px;
     width: 80vw;
     height: 3rem;
     margin: 0 10vw;
@@ -515,10 +514,7 @@ button:hover {
     width: 100%;
     height: calc(100% - 2rem);
     margin-left: 0;
-    /* box-shadow: 4px 4px 12px #030506, -4px -4px 12px #292a30; */
-    /* border: 5px solid blue */
     border-radius: 10px;
-    /* background: #16171a; */
   }
 
   #chat-zone .message-item.moderator .message-bloc,
@@ -532,7 +528,7 @@ button:hover {
     left: 10%;
     right: initial;
     /* bottom: calc(3rem + 2rem); */
-    bottom: 0;
+    bottom: 1.2em;
     width: 80%;
     height: 2rem;
     margin: 0.5rem 0;

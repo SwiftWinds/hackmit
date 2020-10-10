@@ -79,7 +79,7 @@ p {
     height: 69vh;
   }
 }
-@media screen and (max-height: 799px) {
+@media screen and (max-height: 800px) and (max-width: 800px) {
   #waves-hero {
     height: 100vh;
   }

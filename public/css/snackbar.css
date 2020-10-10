@@ -17,8 +17,8 @@
   opacity: 0;
   z-index: 9999;
 
-  background-color: #376df9;
-  background: linear-gradient(100deg, #376df9 0, #ff5fa0 75%, #ffc55a 100%);
+  background-color: #00768d;
+  background: linear-gradient(120deg, #0087a1 0%, #00667a 100%);
 }
 
 .snackbar-container .action {
