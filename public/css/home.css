@@ -14,7 +14,6 @@ p {
   font-size: 1.42em;
 }
 
-
 #waves-hero {
   height: 76.9vh;
   width: 100%;
@@ -52,7 +51,6 @@ p {
     height: 100vh;
   }
 }
-
 
 @media screen and (min-width: 1000px) and (min-height: 500px) {
   #waves-hero {
@@ -93,7 +91,7 @@ p {
 }
 
 .dashed-bottom {
-    border-bottom: 2px rgba(11, 71, 95, .42) dashed;
+  border-bottom: 2px rgba(11, 71, 95, 0.42) dashed;
 }
 
 .section .title span {
@@ -103,10 +101,30 @@ p {
   background-position: 0 86%;
 }
 
-
 .alert-dark {
   border: 0;
   background-color: rgb(0, 29, 56);
   color: white;
   padding: 2.5em 2em;
+}
+
+.advantages ul li {
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+ul li:before {
+  content: "\00BB \0020";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.advantages i {
+  color: #0096b4;
 }
