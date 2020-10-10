@@ -218,7 +218,12 @@ button:hover {
 
 #entire-chat,
 #entire-chat * {
-  overflow: hidden !important;
+  overflow-x: hidden;
+}
+
+#entire-chat::-webkit-scrollbar,
+#entire-chat *::-webkit-scrollbar {
+  display: none;
 }
 
 #entire-chat {
@@ -385,7 +390,7 @@ button:hover {
     margin: 0;
     line-height: 2rem;
   }
-
+  
   #remote-video {
     /* width: 75vw;
     height: calc((16/9) * 75vw); */
