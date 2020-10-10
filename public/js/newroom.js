@@ -50,6 +50,18 @@ var adjectives = [
   "calm",
   "silly",
   "smart",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
+  "pizza",
 ];
 
 var nouns = [
@@ -115,16 +127,26 @@ var nouns = [
   "parrot",
   "sloth",
   "swan",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
+  "rat",
 ];
 
 var adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
 var noun = nouns[Math.floor(Math.random() * nouns.length)];
 noun = noun.charAt(0).toUpperCase() + noun.substring(1);
 adjective = adjective.charAt(0).toUpperCase() + adjective.substring(1);
-document.getElementById("input-01").value = adjective + noun;
-
-adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-noun = nouns[Math.floor(Math.random() * nouns.length)];
-noun = noun.charAt(0).toUpperCase() + noun.substring(1);
-adjective = adjective.charAt(0).toUpperCase() + adjective.substring(1);
-document.getElementById("input-02").value = adjective + noun;
+document.getElementById("call-id").value = adjective + noun;

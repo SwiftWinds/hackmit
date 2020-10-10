@@ -285,7 +285,7 @@ class App {
 window.addEventListener(
   "DOMContentLoaded",
   () => {
-    if (window.innerWidth > 800) MOUSE.init();
+    if (window.innerWidth > 800 && window.innerHeight > 600) MOUSE.init();
     const app = new App();
     app.initApp();
     RAF.init();

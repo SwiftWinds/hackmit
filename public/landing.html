@@ -16,10 +16,14 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/root.css" />
+    <link rel="stylesheet" href="./css/home.css" />
 
     <title>Latent Space</title>
+    <script
+      src="https://kit.fontawesome.com/7593f939e5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="waves-hero"></div>
@@ -31,38 +35,116 @@
               <h1 class="display-1">
                 <b class="underline-effect">Latent Space</b>
               </h1>
-              <h1>Minimizing latency with latent space.</h1>
+              <h1>Minimizing audio latency with latent space.</h1>
               <div class="container mt-3">
                 <p>
-                  Using recurrent neural autoencoders, Latent Space compresses
-                  audio streams with embeddings specifically for music,
-                  eliminating latency and allowing for smooth real-time virtual
-                  collaboration.
+                  One sentence (around 10 words) that describes what we do.
                 </p>
               </div>
             </div>
-            <a href="#intro">
-              <div class="mt-5">
-                <div class="arrow bounce"></div>
-              </div>
-            </a>
+            <a href="#call"
+              ><button class="btn font-weight-bold pulse mb-2">
+                Try Now
+              </button></a
+            >
           </div>
         </div>
       </div>
     </div>
-    <div class="container" id="intro">
-      sfds
+
+    <div class="dashed-bottom section">
+      <div class="container" id="intro">
+        <div class="row">
+          <div class="col">
+            <h1 class="title"><span>Using AI to Decrease Latency</span></h1>
+            <p>
+              Using recurrent neural autoencoders, Latent Space
+              <b> compresses audio streams </b>with embeddings specifically for
+              music, eliminating latency and allowing for
+              <b>smooth real-time virtual collaboration</b>.
+            </p>
+            <p>
+              Latent Space
+              <b> reduces audio payloads by 78%</b>, enabling musicians and
+              others to synchronize as closely as possible.
+            </p>
+            <div class="medium alert alert-info" role="alert">
+              <h3>
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Autoencoders
+              </h3>
+              Autoencoders are like a spring:<br />
+              <ol>
+                <li>
+                  they first compress the input,
+                </li>
+                <li>
+                  then modify the compressed version (called the
+                  <b>latent space</b>),
+                </li>
+                <li>
+                  then stretch it back into the output.
+                </li>
+              </ol>
+              Latent Space uses RNAEs to optimize audio data transmission by
+              domain -- a novel approach to communication.
+            </div>
+            <a href="#call"
+              ><button class="btn font-weight-bold mb-2">Get started</button></a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="container py-5">
-      <input type="text" id="goto" />
-      <button
-        onclick="{window.location.href = '/join/' + document.getElementById('goto').value}"
-      >
-        Go
-      </button>
+
+    <div class="container section" id="call">
+      <div class="alert alert-dark">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 col-lg-7">
+            <h1>
+              <b>
+                Pick a name.
+              </b>
+              <br />
+              <b>Share the URL.</b>
+            </h1>
+            <p class="mb-md-0 mb-3">Each call has its own disposable URL.</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="input-group">
+              <input
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                type="text"
+                id="call-id"
+                class="form-control inputText"
+                placeholder="Call ID"
+                aria-label="Call ID"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btnInput input-group-text"
+                  onclick="{window.location.href = '/join/' + document.getElementById('call-id').value}"
+                >
+                  Call Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="js/home/hero.js"></script>
+    <script src="js/newroom.js"></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/7a9c4b610c.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
