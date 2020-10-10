@@ -477,6 +477,7 @@ button:hover {
   .multi-button button {
     position: relative;
     width: 100%;
+    bottom: 5px;
     border: none;
     font-size: 2rem;
     transition: all 0.3s ease-in-out;
