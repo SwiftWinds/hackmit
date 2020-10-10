@@ -5,6 +5,7 @@ body {
   text-decoration: none;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
+  background: #f4f3f3;
 }
 
 img {
@@ -23,27 +24,12 @@ button {
 }
 
 ::-moz-selection {
-  background-color: #dd62afaa;
+  background-color: #62cbdd;
   color: #eee;
 }
 ::selection {
-  background-color: #dd62afaa;
+  background-color: #62cbdd;
   color: #eee;
-}
-
-.github-logo,
-body
-  > div
-  > footer
-  > div
-  > div
-  > div.footer-top.space-between.text-xxs
-  > div.footer-social
-  > div
-  > a
-  > svg
-  > path {
-  fill: #ee60a8;
 }
 
 /* width */
@@ -58,13 +44,13 @@ body
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e861aa;
+  background: #5a9fac;
   transition: all 0.55s ease;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff6d96;
+  background: #5aaebe;
 }
 
 a,
@@ -85,3 +71,10 @@ button:hover {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+.underline-effect {
+  background-image: linear-gradient(120deg, #007086 0%, #0d6e81 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.25em;
+  background-position: 0 88%;
+} 

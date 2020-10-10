@@ -1,419 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-178464781-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-178464781-1");
-    </script>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Latent Space</title>
-    <link rel="stylesheet" href="css/root.css" />
-    <link rel="stylesheet" href="css/landing.css" />
-    <link rel="shortcut icon" href="images/logo.svg" />
-    <meta property="og:title" content="Latent Space" />
     <meta
-      property="og:description"
-      content="Latent Space is a recurrent neural autoencoder that compresses audio streams, with embeddings specifically for music, to reduce audio lag. Built on Zipcall."
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/root.css" />
+
+    <title>Latent Space</title>
   </head>
-  <body class="has-animations">
-    <tag
-      autocomplete="off"
-      autocorrect="off"
-      autocapitalize="off"
-      spellcheck="false"
-    />
-    <div class="body-wrap">
-      <header class="site-header reveal-from-top">
-        <div class="container">
-          <div class="site-header-inner">
-            <div class="brand">
-              <h1 class="m-0">
-                <a href="/"
-                  ><img src="images/logo.svg" alt="Neon" width="32" height="32"
-                /></a>
+  <body>
+    <div id="waves-hero"></div>
+    <div class="hero">
+      <div class="container h-100 text-center">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="col">
+            <div class="mb-4">
+              <h1 class="display-1">
+                <b class="underline-effect">Latent Space</b>
               </h1>
+              <h1>Minimizing latency with latent space.</h1>
+              <div class="container mt-3">
+                <p>
+                  Using recurrent neural autoencoders, Latent Space compresses
+                  audio streams with embeddings specifically for music,
+                  eliminating latency and allowing for smooth real-time virtual
+                  collaboration.
+                </p>
+              </div>
             </div>
+            <a href="#intro">
+              <div class="mt-5">
+                <div class="arrow bounce"></div>
+              </div>
+            </a>
           </div>
         </div>
-      </header>
-      <main class="site-content">
-        <section class="illustration-section-01">
-          <div class="container">
-            <div class="hero-inner section-inner">
-              <div class="split-wrap invert-mobile">
-                <div style="margin-top: 75px; margin-bottom: 42px;">
-                  <div
-                    class="hero-content split-item-content center-content-mobile"
-                  >
-                    <h1
-                      class="mt-7 title reveal-from-bottom"
-                      data-aos="zoom-in-up"
-                      data-aos-duration="1100"
-                    >
-                      Latent Space
-                    </h1>
-                    <h2
-                      style="margin-top: 0;"
-                      class="mb-16 reveal-from-bottom"
-                      data-aos="zoom-in-up"
-                      data-aos-duration="1250"
-                    >
-                      Minimizing latency with latent space.
-                    </h2>
-                    <p
-                      class="mt-0 mb-0 reveal-from-bottom latent-space-subtitle"
-                      data-aos="zoom-in-up"
-                      data-aos-duration="1400"
-                    >
-                      Using recurrent neural autoencoders, Latent Space
-                      compresses audio streams with embeddings specifically for
-                      music, eliminating latency and allowing for smooth
-                      real-time virtual collaboration.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="newcall"
-          class="cta section center-content-mobile reveal-from-bottom"
-        >
-          <div class="container" data-aos="zoom-in-up" data-aos-duration="1550">
-            <div class="cta-inner section-inner cta-split">
-              <div class="cta-slogan">
-                <h3 class="m-0">
-                  Pick a name.<br />
-                  Share the URL.
-                </h3>
-              </div>
-              <div class="cta-action">
-                <div class="mb-24">
-                  <label class="form-label screen-reader" for="input-01"
-                    >Enter a name</label
-                  >
-                  <div class="form-group-desktop">
-                    <input
-                      class="form-input"
-                      type="text"
-                      id="input-01"
-                      placeholder="Choose a name"
-                    />
-                    <button
-                      class="button button-primary pulse"
-                      onclick="{window.location.href = '/join/' + document.getElementById('input-01').value}"
-                    >
-                      Start call
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="features-tiles section center-content">
-          <div class="container">
-            <div
-              class="features-tiles-inner section-inner has-top-divider"
-              style="position: relative; top: 10vh;"
-            >
-              <div class="section-header">
-                <div
-                  class="container-xs reveal-from-bottom"
-                  data-reveal-delay="150"
-                  data-aos="fade-up"
-                  data-aos-duration="1200"
-                >
-                  <h2 class="mt-0 mb-16">
-                    Zero latency. Smooth calling.
-                  </h2>
-                  <p class="m-0">
-                    With Latent Space, never experience latency again. Our
-                    platform is specifically engineered to provide decentralized
-                    peer-to-peer calling with minimal lag.
-                  </p>
-                </div>
-              </div>
-              <div class="tiles-wrap">
-                <div
-                  class="tiles-item reveal-from-right"
-                  data-aos="fade-up-right"
-                  data-aos-duration="1200"
-                >
-                  <div class="tiles-item-inner">
-                    <div class="features-tiles-item-header">
-                      <div class="features-tiles-item-image mb-16">
-                        <img
-                          src="images/feature-tile-icon-02.svg"
-                          alt="Feature tile icon 02"
-                          width="72"
-                          height="72"
-                        />
-                      </div>
-                    </div>
-                    <div class="features-tiles-item-content">
-                      <h4 class="mt-0 mb-8">Smart Audio Compression</h4>
-                      <p class="m-0 text-sm">
-                        Using recurrent neural autoencoders, we compress your
-                        audio into unstructured genre-based data. Say goodbye to
-                        lag.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="tiles-item reveal-from-left"
-                  data-aos="fade-up-left"
-                  data-aos-duration="1200"
-                >
-                  <div class="tiles-item-inner">
-                    <div class="features-tiles-item-header">
-                      <div class="features-tiles-item-image mb-16">
-                        <img
-                          src="images/feature-tile-icon-04.svg"
-                          alt="Feature tile icon 04"
-                          width="72"
-                          height="72"
-                        />
-                      </div>
-                    </div>
-                    <div class="features-tiles-item-content">
-                      <h4 class="mt-0 mb-8">Flawless Video Quality</h4>
-                      <p class="m-0 text-sm">
-                        State of the art video compression combined with our
-                        scaling optimization makes your calls crystal clear.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="tiles-item reveal-from-right"
-                  data-aos="fade-up-right"
-                  data-aos-duration="1200"
-                >
-                  <div class="tiles-item-inner">
-                    <div class="features-tiles-item-header">
-                      <div class="features-tiles-item-image mb-16">
-                        <img
-                          src="images/feature-tile-icon-05.svg"
-                          alt="Feature tile icon 05"
-                          width="72"
-                          height="72"
-                        />
-                      </div>
-                    </div>
-                    <div class="features-tiles-item-content">
-                      <h4 class="mt-0 mb-8">No Server Needed</h4>
-                      <p class="m-0 text-sm">
-                        Calls are only between you and your caller,
-                        decentralized and away from servers. Data never leaves
-                        the browser.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="tiles-item reveal-from-left"
-                  data-aos="fade-up-left"
-                  data-aos-duration="1200"
-                >
-                  <div class="tiles-item-inner">
-                    <div class="features-tiles-item-header">
-                      <div class="features-tiles-item-image mb-16">
-                        <img
-                          src="images/feature-tile-icon-03.svg"
-                          alt="Feature tile icon 03"
-                          width="72"
-                          height="72"
-                        />
-                      </div>
-                    </div>
-                    <div class="features-tiles-item-content">
-                      <h4 class="mt-0 mb-8">Complete Privacy</h4>
-                      <p class="m-0 text-sm">
-                        Each chat is single use, and data stays between you and
-                        your caller. Latent Space is privacy-focused.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="tiles-item reveal-from-right"
-                  data-aos="fade-up-right"
-                  data-aos-duration="1200"
-                >
-                  <div class="tiles-item-inner">
-                    <div class="features-tiles-item-header">
-                      <div class="features-tiles-item-image mb-16">
-                        <img
-                          src="images/feature-tile-icon-01.svg"
-                          alt="Feature tile icon 01"
-                          width="72"
-                          height="72"
-                        />
-                      </div>
-                    </div>
-                    <div class="features-tiles-item-content">
-                      <h4 class="mt-0 mb-8">Lowest Latency</h4>
-                      <p class="m-0 text-sm">
-                        Breakthrough peer to peer WebRTC technology means your
-                        video goes directly to the other person without a
-                        server. No middleman. No extra stops.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="tiles-item reveal-from-left"
-                  data-aos="fade-up-left"
-                  data-aos-duration="1200"
-                >
-                  <div class="tiles-item-inner">
-                    <div class="features-tiles-item-header">
-                      <div class="features-tiles-item-image mb-16">
-                        <img
-                          src="images/feature-tile-icon-06.svg"
-                          alt="Feature tile icon 06"
-                          width="72"
-                          height="72"
-                        />
-                      </div>
-                    </div>
-                    <div class="features-tiles-item-content">
-                      <h4 class="mt-0 mb-8">Maximum Security</h4>
-                      <p class="m-0 text-sm">
-                        End-to-end state of the art encryption means your calls
-                        are exactly that&mdash;your calls.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" style="position: relative; top: 5vh;">
-          <div class="container">
-            <div style="margin-top: 42px;">
-              <div class="center-content">
-                <h2>
-                  Say goodbye to latency with Latent Space.
-                </h2>
-              </div>
-              <div class="center-content">
-                <div
-                  class="form-group-desktop"
-                  style="
-                    margin: 0 auto;
-                    margin-bottom: 2.4em;
-                    max-width: 400px;
-                  "
-                >
-                  <input
-                    class="form-input"
-                    type="text"
-                    id="input-02"
-                    placeholder="Choose a name"
-                  />
-                  <a
-                    class="button button-primary button-wide-mobile pulse"
-                    style="
-                      border: 0;
-                      background: linear-gradient(
-                        100deg,
-                        #376df9 0,
-                        #ff5fa0 75%,
-                        #ffc55a 100%
-                      );
-                    "
-                    onclick="{window.location.href = '/join/' + document.getElementById('input-02').value}"
-                    >Try now</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="site-footer center-content-mobile">
-        <div class="container">
-          <div class="site-footer-inner">
-            <div class="footer-top space-between text-xxs">
-              <div class="brand">
-                <a href="/"
-                  ><img src="images/logo.svg" alt="Neon" width="32" height="32"
-                /></a>
-              </div>
-              <div class="footer-social">
-                <div>
-                  <a
-                    target="_blank"
-                    href="https://github.com/SwiftWinds/hackmit"
-                  >
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>GitHub</title>
-                      <path
-                        class="github-logo"
-                        d="M7.95 0C3.578 0 0 3.578 0 7.95c0 3.479 2.286 6.46 5.466 7.553.397.1.497-.199.497-.397v-1.392c-2.187.497-2.683-.994-2.683-.994-.398-.894-.895-1.192-.895-1.192-.696-.497.1-.497.1-.497.795.1 1.192.795 1.192.795.696 1.292 1.888.894 2.286.696.1-.497.298-.895.497-1.093-1.79-.2-3.578-.895-3.578-3.976 0-.894.298-1.59.795-2.087-.1-.198-.397-.993.1-2.086 0 0 .695-.2 2.186.795a6.408 6.408 0 0 1 1.987-.299c.696 0 1.392.1 1.988.299 1.49-.994 2.186-.795 2.186-.795.398 1.093.199 1.888.1 2.086.496.597.795 1.292.795 2.087 0 3.081-1.889 3.677-3.677 3.876.298.398.596.895.596 1.59v2.187c0 .198.1.496.596.397C13.714 14.41 16 11.43 16 7.95 15.9 3.578 12.323 0 7.95 0z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="footer-bottom space-between text-xxs invert-order-desktop"
-            >
-              <nav class="footer-nav">
-                <ul class="list-reset">
-                  <li>
-                    HackMIT 2020
-                  </li>
-                </ul>
-              </nav>
-              <div class="footer-copyright">
-                &copy; 2020 Latent Space. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
     </div>
-    <script src="js/landing.js"></script>
-    <script src="js/newroom.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-      });
-    </script>
+    <div class="container" id="intro">
+      sfds
+    </div>
+    <div class="container py-5">
+      <input type="text" id="goto" />
+      <button
+        onclick="{window.location.href = '/join/' + document.getElementById('goto').value}"
+      >
+        Go
+      </button>
+    </div>
+
+    <script src="js/home/hero.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
