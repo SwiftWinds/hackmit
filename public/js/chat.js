@@ -810,7 +810,7 @@ function startUp() {
   $(".HoverState").hide();
 
   // Text chat hidden by default
-  if (window.innerWidth < 1000) entireChat.hide();
+  entireChat.hide();
 
   // Show hide button labels on hover
   $(document).ready(function () {
