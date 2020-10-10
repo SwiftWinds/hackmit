@@ -11,8 +11,8 @@ const MOUSE = {
   },
   onMouseMove: function (_e) {
     var e = MOUSE.unify(_e);
-    MOUSE.x = e.x + 380;
-    MOUSE.y = e.y + 190;
+    MOUSE.x = e.x + window.innerWidth - 390;
+    MOUSE.y = e.y + window.innerHeight / 2;
   },
   unify: function (e) {
     return e.changedTouches ? e.changedTouches[0] : e;
@@ -56,7 +56,7 @@ var RAF = {
     RAF.render();
   },
   render: function () {
-    var time = new Date().getTime() * 0.005;
+    var time = new Date().getTime() * 0.013;
     for (var index = 0; index < this.elements.length; index++) {
       var element = this.elements[index];
       element.render(time);
@@ -70,7 +70,7 @@ class Vector {
     this.y = _y;
     this.x0 = this.x;
     this.y0 = this.y;
-    this.vibe = 0.25;
+    this.vibe = 0.69;
   }
   curveTo(to) {
     return {
@@ -94,7 +94,7 @@ class Vector {
   repulse() {
     var limit = 1000;
     var force = 0.2;
-    var force2 = 1;
+    var force2 = 2.5;
     var dx = MOUSE.x - this.x;
     var dy = MOUSE.y - this.y;
     var angle = Math.atan2(dx, dy);
