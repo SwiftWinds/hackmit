@@ -59,9 +59,6 @@ var adjectives = [
   "pizza",
   "pizza",
   "pizza",
-  "pizza",
-  "pizza",
-  "pizza",
 ];
 
 var nouns = [
@@ -127,8 +124,6 @@ var nouns = [
   "parrot",
   "sloth",
   "swan",
-  "rat",
-  "rat",
   "rat",
   "rat",
   "rat",

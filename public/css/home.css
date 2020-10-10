@@ -43,6 +43,16 @@ p {
     height: 100vh;
   }
 }
+@media screen and (max-width: 400px) {
+  #waves-hero {
+    height: 100vh;
+  }
+  .hero {
+    margin-top: -100vh;
+    height: 100vh;
+  }
+}
+
 
 @media screen and (min-width: 1000px) and (min-height: 500px) {
   #waves-hero {
@@ -51,6 +61,15 @@ p {
   .hero {
     margin-top: -69vh;
     height: 69vh;
+  }
+}
+@media screen and (max-height: 699px) {
+  #waves-hero {
+    height: 100vh;
+  }
+  .hero {
+    margin-top: -100vh;
+    height: 100vh;
   }
 }
 
