@@ -828,7 +828,6 @@ function startUp() {
   function delayCheck() {
     if (timedelay === 5) {
       // $(".multi-button").fadeOut();
-      $("#header").fadeOut();
       timedelay = 1;
     }
     timedelay = timedelay + 1;
