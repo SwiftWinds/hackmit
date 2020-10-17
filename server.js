@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
 });
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(public, "landing.html"));
+  res.sendFile(path.join(public, "home.html"));
 });
 
 app.get("/join/", function (req, res) {
@@ -44,16 +44,16 @@ app.get("/join/*", function (req, res) {
     logIt("redirect:" + req.url + " to " + url.parse(req.url).pathname);
     res.redirect(url.parse(req.url).pathname);
   } else {
-    res.sendFile(path.join(public, "chat.html"));
+    res.sendFile(path.join(public, "call.html"));
   }
 });
 
 app.get("/unsupported", function (req, res) {
-  res.sendFile(path.join(public, "unsupported.html"));
+  res.sendFile(path.join(public, "/unsupported/unsupported.html"));
 });
 
 app.get("/unsupported-apple", function (req, res) {
-  res.sendFile(path.join(public, "unsupported-apple.html"));
+  res.sendFile(path.join(public, "/unsupported/unsupported-apple.html"));
 });
 
 // Serve static files in the public directory
