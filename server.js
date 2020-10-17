@@ -14,6 +14,10 @@ var path = require("path");
 var public = path.join(__dirname, "public");
 const url = require("url");
 
+function redirectUnmatched(req, res) {
+  res.redirect("/");
+}
+
 // enable ssl redirect
 app.use(sslRedirect());
 
@@ -44,12 +48,12 @@ app.get("/join/*", function (req, res) {
   }
 });
 
-app.get("/notsupported", function (req, res) {
-  res.sendFile(path.join(public, "notsupported.html"));
+app.get("/unsupported", function (req, res) {
+  res.sendFile(path.join(public, "unsupported.html"));
 });
 
-app.get("/notsupportedios", function (req, res) {
-  res.sendFile(path.join(public, "notsupportedios.html"));
+app.get("/unsupported-apple", function (req, res) {
+  res.sendFile(path.join(public, "unsupported-apple.html"));
 });
 
 // Serve static files in the public directory
@@ -63,6 +67,8 @@ function logIt(msg, room) {
     console.log(msg);
   }
 }
+
+app.use(redirectUnmatched);
 
 // When a socket connects, set up the specific listeners we will use.
 io.on("connection", function (socket) {

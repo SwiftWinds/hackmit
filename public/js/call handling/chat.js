@@ -777,21 +777,21 @@ function startUp() {
       ua.indexOf("Instagram") > -1)
   ) {
     if (DetectRTC.osName === "iOS") {
-      window.location.href = "/notsupportedios";
+      window.location.href = "/unsupported-apple";
     } else {
-      window.location.href = "/notsupported";
+      window.location.href = "/unsupported";
     }
   }
 
   // Redirect all iOS browsers that are not Safari
   if (DetectRTC.isMobileDevice) {
     if (DetectRTC.osName === "iOS" && !DetectRTC.browser.isSafari) {
-      window.location.href = "/notsupportedios";
+      window.location.href = "/unsupported-apple";
     }
   }
 
   if (!isWebRTCSupported || browserName === "MSIE") {
-    window.location.href = "/notsupported";
+    window.location.href = "/unsupported";
   }
 
   // Set tab title
