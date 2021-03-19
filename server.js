@@ -47,6 +47,10 @@ app.get("/ClefNet", function (req, res) {
   res.redirect("/ClefNet.pdf");
 });
 
+app.get("/repo", function (req, res) {
+  res.redirect("http://github.com/rvignav/ClefNet");
+});
+
 app.get("/preprints", function (req, res) {
   res.redirect("https://www.preprints.org/manuscript/202103.0360/v1");
 });
