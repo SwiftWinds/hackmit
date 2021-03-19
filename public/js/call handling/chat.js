@@ -623,10 +623,13 @@ function startSpeech() {
         var charsToKeep = interimTranscript.length % 100;
         // Send captions over data chanel,
         // subtracting as many complete 100 char slices from start
-        dataChanel.send(
-          "cap:" +
-            interimTranscript.substring(interimTranscript.length - charsToKeep)
-        );
+        if (!isMuted)
+          dataChanel.send(
+            "cap:" +
+              interimTranscript.substring(
+                interimTranscript.length - charsToKeep
+              )
+          );
       }
     }
   };
