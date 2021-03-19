@@ -11,7 +11,7 @@ html {
 }
 
 p {
-  font-size: 1.42em;
+  font-size: 1.2em;
 }
 
 #waves-hero {
@@ -152,4 +152,20 @@ ul li:before {
 
 .advantages i {
   color: #0096b4;
+}
+
+.research p {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.research a {
+  color: #0096b4;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.research .cite {
+  border: 1.5px #222 solid;
+  padding: 1.2em;
 }

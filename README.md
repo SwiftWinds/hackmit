@@ -3,7 +3,7 @@
 Say goodbye to latency with Latent Space.
 
 ```
-git clone https://github.com/SwiftWinds/hackmit.git
+git clone https://github.com/rvignav/ClefNet.git
 cd hackmit
 npm install
 npm run dev
